@@ -4,6 +4,15 @@ Cooking with(-in) Python Classes 🥘
 ### Objective
 This assignment is designed to help you practice working with **Git branches**, **object-oriented programming** in Python, and **collaborative code merging**. You’ll extend the existing `PastaRecipe` class to include your very own pasta recipe, then work on a custom branch to commit those changes. Finally, we’ll merge everyone’s work together in class for one giant pasta feast!
 
+## Project Structure
+
+    cooking-class/
+        │── main.py # Runs the selected pasta recipes 
+        │── pasta_recipe.py # Defines the PastaRecipe class 
+        │── carbonara.py # Carbonara recipe instance 
+        │── pesto_genovese.py # Pesto Genovese recipe instance 
+        │── README.md
+
 ---
 
 ### Instructions
@@ -35,18 +44,20 @@ This assignment is designed to help you practice working with **Git branches**, 
      ```bash
      git checkout -b studentname-recipename
      ```
+   Example: `alex-smokedsalmonpasta` or `eva-amatriciana`
 
 2. **Extend the `PastaRecipe` Class**  
-   - Open the files (e.g., `PastaRecipe.py` and/or `main.py`, depending on project structure).
-   - Create your **own recipe** by adding:
-     - A unique `name` for your pasta dish.
-     - A `ingredients` dictionary with quantity and emoji references.
-     - A `recipe_steps` list, each step is a dictionary containing `action`, `time`, and (optionally) `temperature`.
-     - Update the `available_ingredients` list accordingly.
+   - Open `pasta_recipe.py` and ensure the class structure is understood.
+   - Create a new Python file for your pasta, similar to `carbonara.py`.
+   - Define a new `PastaRecipe` object with:
+     - A unique `name`
+     - `ingredients` dictionary with quantities and emojis
+     - `recipe_steps` list with steps (`action`, `time`, `temperature` if needed)
+     - `available_ingredients` list accordingly.
 
-3. **Instantiate and Cook Your Pasta**  
-   - In `main.py`, instantiate your new `PastaRecipe` object with the attributes you’ve created.
-   - Call the methods:  
+3. **Instantiate and Cook Your Pasta (Add It to `main.py`)**  
+   - Import your recipe in `main.py`
+   - Run it with:
      ```python
      my_recipe.show_ingredients()
      my_recipe.check_ingredients()
